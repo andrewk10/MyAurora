@@ -52,6 +52,7 @@ COPY build.sh /tmp/build.sh
 COPY build.sh /tmp/build.sh
 COPY system_files /tmp/system_files
 COPY rpms /tmp/rpms
+COPY var/log/mullvad-vpn var/log/mullvad-vpn
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
