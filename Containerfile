@@ -52,7 +52,7 @@ COPY build.sh build.sh
 COPY usr usr
 COPY rpms rpms
 COPY var var
-COPY usr usr
+COPY opt opt
 
 RUN mkdir -p /var/lib/alternatives && \
     ./build.sh && \
