@@ -12,8 +12,12 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
-rpm-ostree install screen lynis waydroid
+# this installs a package from fedora repos and custom rpms
+rpm-ostree install \
+    screen \
+    lynis \
+    waydroid \
+    /tmp/rpms/MullvadVPN-2024.3_x86_64.rpm
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc

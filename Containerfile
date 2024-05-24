@@ -51,6 +51,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 COPY build.sh /tmp/build.sh
 COPY build.sh /tmp/build.sh
 COPY system_files /tmp/system_files
+COPY rpms /tmp/rpms
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
