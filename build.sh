@@ -17,7 +17,7 @@ rpm-ostree install \
     screen \
     lynis \
     waydroid \
-    /tmp/rpms/MullvadVPN-2024.3_x86_64.rpm
+    /rpms/MullvadVPN-2024.3_x86_64.rpm
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
@@ -25,6 +25,6 @@ rpm-ostree install \
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-systemctl enable tmp/system_files/usr/lib/systemd/system/waydroid-workaround.service
+systemctl enable system_files/usr/lib/systemd/system/waydroid-workaround.service
 systemctl enable waydroid-container
 systemctl enable mullvad-daemon.service
