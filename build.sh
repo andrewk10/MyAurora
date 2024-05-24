@@ -22,3 +22,4 @@ rpm-ostree install screen lynis waydroid
 
 systemctl enable podman.socket
 systemctl enable waydroid-container
+systemctl enable waydroid-workaround.service
