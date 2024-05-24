@@ -21,5 +21,5 @@ rpm-ostree install screen lynis waydroid
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-systemctl enable waydroid-workaround.service
+systemctl enable tmp/system_files/usr/lib/systemd/system/waydroid-workaround.service
 systemctl enable waydroid-container
