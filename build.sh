@@ -27,3 +27,4 @@ rpm-ostree install \
 systemctl enable podman.socket
 systemctl enable tmp/system_files/usr/lib/systemd/system/waydroid-workaround.service
 systemctl enable waydroid-container
+systemctl enable mullvad-daemon.service
