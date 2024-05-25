@@ -18,7 +18,7 @@ rpm-ostree install \
     screen \
     lynis \
     waydroid \
-    rpms/teamviewer_15.53.6.x86_64
+    rpms/teamviewer_15.53.6.x86_64.rpm
 
 #### Example for enabling a System Unit File
 # Worth noting that these unit files are enabled on the container and not the client
