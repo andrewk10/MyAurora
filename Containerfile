@@ -49,11 +49,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh build.sh
-COPY usr usr
 COPY rpms rpms
-COPY var var
-COPY opt opt
-COPY etc etc
 
 RUN mkdir -p /var/lib/alternatives && \
     ./build.sh && \
