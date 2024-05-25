@@ -17,8 +17,10 @@ RELEASE="$(rpm -E %fedora)"
 rpm-ostree install \
     screen \
     lynis \
-    waydroid \
-    rpms/teamviewer_15.53.6.x86_64.rpm
+    waydroid
+
+# this would install a package from rpmfusion
+# rpm-ostree install vlc
 
 #### Example for enabling a System Unit File
 # Worth noting that these unit files are enabled on the container and not the client
