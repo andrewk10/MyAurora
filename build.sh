@@ -25,6 +25,3 @@ rpm-ostree install \
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-systemctl enable system_files/usr/lib/systemd/system/waydroid-workaround.service
-systemctl enable waydroid-container
-systemctl enable mullvad-daemon.service
