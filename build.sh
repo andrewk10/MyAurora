@@ -13,15 +13,15 @@ RELEASE="$(rpm -E %fedora)"
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos and custom rpms
+# mullvad has to be layered locally for now no biggie :)
 rpm-ostree install \
     screen \
     lynis \
-    waydroid \
-    /rpms/MullvadVPN-2024.3_x86_64.rpm
+    waydroid
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
 
 #### Example for enabling a System Unit File
-
+# Worth noting that these unit files are enabled on the container and not the client
 systemctl enable podman.socket
