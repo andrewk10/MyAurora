@@ -25,3 +25,4 @@ rpm-ostree install \
 #### Example for enabling a System Unit File
 # Worth noting that these unit files are enabled on the container and not the client
 systemctl enable podman.socket
+systemctl enable waydroid-workaround.service
