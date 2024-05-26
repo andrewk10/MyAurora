@@ -49,9 +49,9 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh build.sh
-# to copy for system-wide / admin you need to copy to /usr/lib/systemd/system
-COPY systemd/waydroid-workaround.service /usr/lib/systemd/user/
+# to copy for user specific you need to copy to /usr/lib/systemd/user
 COPY systemd/waydroid-workaround.service /usr/lib/systemd/system/
+COPY systemd/waydroid-workaround.conf /usr/lib/tmpfiles.d/
 
 RUN mkdir -p /var/lib/alternatives && \
     ./build.sh && \
