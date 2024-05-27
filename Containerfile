@@ -51,6 +51,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 COPY build.sh build.sh
 # to copy for user specific you need to copy to /usr/lib/systemd/user
 COPY systemd/waydroid-workaround.service /usr/lib/systemd/system/
+COPY systemd/powertop-autotune.service /usr/lib/systemd/system/
 COPY systemd/waydroid-workaround.conf /usr/lib/tmpfiles.d/
 
 RUN mkdir -p /var/lib/alternatives && \

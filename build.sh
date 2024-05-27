@@ -26,3 +26,4 @@ rpm-ostree install \
 # Worth noting that these unit files are enabled on the container and not the client
 systemctl enable podman.socket
 systemctl enable waydroid-workaround.service
+systemctl enable powertop-autotune.service
