@@ -6,13 +6,11 @@ on:
       - main
   schedule:
     - cron: '05 10 * * *'  # 10:05am UTC everyday
-  # Commenting out for now since it will cause 
-  # a build execution loop with the bazzite.sh script.
-  #push:
-    #branches:
-      #- main
-    #paths-ignore:
-      #- '**/README.md'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/README.md'
   workflow_dispatch:
 
 env:
@@ -21,22 +19,6 @@ env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
 
 jobs:
-  # Updating subdirectories
-  runscript:
-    name: Update Subdirectories from Source
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone the repo
-        run: git clone https://github.com/PussInScreen/MyAurora.git
-      
-      # Remove comment when needed
-      #- name: ls for troubleshooting
-        #run:  ls -a 
-
-      - name: Call the Bash Script
-        run:  bash MyAurora/subdir_sync_scripts/bazzite.sh 
-  
-
   build_push:
     name: Build and push image
     runs-on: ubuntu-latest
